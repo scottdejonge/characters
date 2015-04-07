@@ -1,0 +1,171 @@
+// Imports
+@import './lib/normalize.less';
+@import './mixins.less';
+@import './definitions.less';
+
+//Font Rendering
+html * {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+// Utlities
+* {
+	.box-sizing(border-box);
+}
+
+//Remove Webkit Glow
+textarea, input {
+	outline: none;
+}
+
+// General
+html,
+body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+}
+
+html {
+	font-size: 10px;
+}
+
+body {
+	margin: 0 auto;
+	.regular-font();
+	.font-size(1.8);
+	color: @dark-grey;
+	background: @light;
+	letter-spacing: 0.01rem;
+	.clearfix();
+}
+
+// Links
+a {
+	color: @primary;
+	text-decoration: none;
+	.transition(all @transition-fast ease-in-out);
+
+	&:visited {
+		color: lighten(@primary, 2%);
+	}
+
+	&:hover,
+	&:focus {
+		color: @secondary;
+
+		&:visited {
+			color: @secondary;
+		}
+	}
+}
+
+// Typography
+h1, h2, h3, h4, h5, h6 {
+	margin: 1em 50px;
+	.semibold-font();
+	line-height: 1.2;
+
+	@media @small {
+		margin: 1em 20px;
+	}
+}
+
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+	
+}
+
+h1 {
+	.medium-font();
+	.font-size(3.2);
+	text-align: center;
+}
+
+h2 {
+	.font-size(2.8);
+}
+
+h3 {
+	.font-size(2.2);
+}
+
+h4 {
+	.font-size(1.2);
+}
+
+h5 {
+	.font-size(1.1);
+}
+
+h6 {
+	.font-size(1);
+}
+
+
+p,
+ul li,
+ol li {
+	.regular-font();
+	.font-size(1.6);
+	color: @dark-grey;
+	line-height: 1.6;
+}
+
+// Paragraph
+p {
+	margin: 1.5em 50px;
+
+	@media @small {
+		margin: 1em 20px;
+	}
+}
+
+// Lists
+ul,
+ol {
+	margin: 3em 50px;
+	padding: 0;
+
+	@media @small {
+		margin: 2em 20px;
+	}
+}
+
+ul li,
+ol li {
+	margin: 0.5em 50px;
+
+	@media @small {
+		margin: 1em 20px;
+	}
+}
+
+// Strong
+strong {
+	.bold-font();
+	.font-size(1.4);
+	font-style: normal;
+	text-transform: uppercase;
+}
+
+// Small
+small {
+	font-size: 0.8em;
+	line-height: 1.2;
+}
+
+// Main
+main {
+	margin: 0 auto;
+	padding: 5em;
+	max-width: 1000px;
+	min-height: 100vh;
+	background: @white;
+}
+
+// Footer
+footer {
+	
+}
