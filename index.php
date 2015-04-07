@@ -27,10 +27,10 @@
 				<caption>Character List</caption>
 				<thead>
 					<tr>
-						<td>Character</td>
-						<td>Title</td>
-						<td>Shortcut</td>
-						<td>HTML Entity</td>
+						<th>Character</th>
+						<th>Title</th>
+						<th>Shortcut</th>
+						<th>HTML Entity</th>
 					</tr>
 				</thead>
 				<tbody>
