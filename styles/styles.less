@@ -37,7 +37,6 @@ body {
 	.regular-font();
 	.font-size(1.8);
 	color: @dark-grey;
-	background: @light;
 	letter-spacing: 0.01rem;
 }
 
@@ -158,10 +157,56 @@ small {
 // Main
 main {
 	margin: 0 auto;
-	padding: 5em;
 	max-width: 1000px;
 	min-height: 100vh;
 	background: @white;
+}
+
+// Code + kbd
+code,
+kbd {
+	padding: 5px;
+	font-size: 12px;
+	background: @white;
+	border: 1px solid @light;
+}
+
+// Table
+table {
+	width: 100%;
+
+	thead {
+
+		tr {
+			
+			th {
+				padding: 10px;
+				font-size: 12px;
+				text-align: left;
+			}
+		}
+	}
+
+	tbody {
+
+		tr {
+
+			td {
+				padding: 10px;
+				font-size: 14px;
+
+				&:first-child {
+					width: 64px;
+					font-size: 64px;
+					text-align: center;
+				}
+			}
+
+			&:nth-child(even) {
+				background: @light;
+			}
+		}
+	}
 }
 
 // Footer
